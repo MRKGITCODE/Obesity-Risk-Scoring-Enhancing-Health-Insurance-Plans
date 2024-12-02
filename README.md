@@ -16,7 +16,7 @@ A child’s weight status is determined using an age- and sex-specific percentil
 
 **Team Members **
 
-Anca Kurian, Brian Ngo, Mariam Ibrahim
+Anca Kurian, Brian Ngo, Mariam Ibrahim & Md Razaul Karim
 
 Data Introduction
 
@@ -52,3 +52,99 @@ Rules of Engagement
     Open idea-sharing.
     Providing support for team members facing difficulties.
     Commitment to continuous improvement.
+
+Context & Problem
+Obesity and related health conditions, such as diabetes, cardiovascular diseases, and hypertension, are major contributors to the rising cost of medical insurance. Insurance companies face higher claims from individuals with these conditions, leading to an overall increase in premiums. By analyzing lifestyle habits, we can predict obesity levels and identify high-risk individuals before they develop severe medical conditions, thus reducing healthcare costs in the long term.
+
+The provided dataset contains information on individuals' demographics, eating habits, physical activity, and obesity levels. Predictive analytics can be used to forecast an individual’s obesity risk based on their lifestyle habits. With this information, insurance companies can implement preventative measures, personalized health plans, and adjust insurance premiums based on predicted health outcomes
+
+Key Features in the Dataset
+The dataset includes lifestyle factors that influence health:
+
+Demographics: Gender, Age, Height, Weight
+Dietary habits: Family history with obesity, frequent consumption of high-calorie foods (FAVC), daily meals (NCP), consumption of alcohol (CALC)
+Physical activity: Physical activity frequency (FAF), transportation mode (MTRANS)
+Health-related factors: Smoking (SMOKE), hydration (CH2O), sedentary time (TUE)
+Predictive Analytics Workflow
+Problem Definition:
+We aim to predict the obesity level of individuals (target variable: NObeyesdad) using various features related to lifestyle habits. By predicting obesity early, we can intervene with tailored health programs or adjust insurance premiums.
+
+![Obesity ML Flow ](https://github.com/user-attachments/assets/00db4eaf-435d-475d-857c-d4398093841f)
+
+Data Preprocessing:
+1. Understanding the Data
+The dataset includes key features like Gender, Age, Height, Weight, BMI, Smoking habits, Family history with overweight, and lifestyle factors (e.g., exercise frequency, water intake, etc.), which can be crucial in predicting obesity and its correlation with medical costs.
+
+2. Exploration & Discovery
+You can start with exploratory data analysis (EDA) to uncover trends:
+
+![image](https://github.com/user-attachments/assets/d62ac2d9-d670-446a-88a1-b1c3b4c097cc)
+
+
+Correlation Analysis: Examine correlations between lifestyle habits (like smoking, alcohol consumption, exercise) and obesity.
+Visualization: Use scatter plots, histograms, and heatmaps to see the distribution of obesity across gender, age, and lifestyle choices.
+3. Business Case
+The analysis will provide insights for:
+
+
+![image](https://github.com/user-attachments/assets/ec5d2627-95b8-416e-9a06-b4a9ce9d0477)
+
+
+Insurers: By identifying lifestyle risks like smoking or lack of physical activity, insurers can design tailored premiums based on risk levels.
+Insurance Buyers: Buyers can adopt healthier lifestyle habits to reduce insurance costs by avoiding risk categories such as smoking or high BMI.
+4. Technical Solution
+To address the business case, the following techniques can be applied:
+
+![image](https://github.com/user-attachments/assets/8a4698c7-9a1c-4b4e-8fad-d70d233cdda5)
+
+a. KNN Classification
+Goal: Predict obesity class or risk levels based on features like age, BMI, and lifestyle habits.
+Application: Classify whether an individual is at high or low risk of obesity-related conditions, which can directly impact their insurance premiums.
+b. Regression Models
+Goal: Predict BMI or medical costs based on factors such as age, weight, and exercise frequency.
+Application: Use linear regression or other models to understand how different habits influence BMI and, indirectly, healthcare costs.
+c. Clustering
+
+![image](https://github.com/user-attachments/assets/98ab5d83-3815-418a-96bf-bf5623753adc)
+
+Goal: Group individuals into clusters based on similar lifestyle patterns (e.g., smokers vs. non-smokers, active vs. sedentary).
+Application: This segmentation can allow insurers to identify low- and high-risk groups for customized policy offerings.
+
+Intractive Dashboard 
+
+![Obesity_Dashboard_snapshot](https://github.com/user-attachments/assets/e97a9a08-0942-482b-886c-d7b56b6c6d92)
+
+Dashboard story Telling 
+Power BI dashboard tailored to an insurance business using the obesity dataset, focus on visualizations that highlight risk factors, cost implications, and target groups for optimized insurance strategies. Here's a step-by-step approach for designing an effective dashboard.
+
+1. Prepare Data in Power BI
+Data Preparation: Import the obesity dataset into Power BI and clean it by checking for missing or inconsistent data.
+Create Calculated Columns: For example, you may want to categorize individuals into age groups or label BMI ranges as “Normal,” “Overweight,” “Obese,” etc., depending on BMI values.
+Data Model: Establish relationships between tables if using other datasets (e.g., healthcare cost data, lifestyle information).
+2. Design Dashboard Elements
+A. High-Risk Group Identification
+Bar Chart: Display the count of individuals in each obesity category (e.g., Normal, Overweight, Obese).
+Stacked Bar Chart or Matrix: Show high-risk lifestyle factors such as smoking and low physical activity by obesity category to visually separate risk levels.
+B. Average Healthcare Costs by Obesity Level
+Line and Clustered Column Chart: Compare average healthcare costs across obesity levels, overlayed with age groups, to show which groups drive higher costs.
+Gauge Chart: Represent average healthcare cost, with a dynamic gauge that updates based on filters like obesity level or lifestyle factors.
+C. Age Group and BMI Analysis
+Heatmap or Matrix Table: Display average BMI by age group to quickly spot which demographics have the highest obesity levels.
+Clustered Column Chart: Compare BMI and healthcare costs across age groups, helping to pinpoint age ranges where intervention might be needed most.
+D. Physical Activity and Cost Savings Analysis
+Scatter Plot: Plot physical activity levels against healthcare costs for each obesity category. This helps identify cost-saving opportunities by promoting physical activity.
+Card Visuals: Show metrics like “Average Cost for Low Physical Activity,” “Average Cost for High Physical Activity,” or “Cost Savings from Increased Activity.”
+E. Risk Factor Comparison by Lifestyle Choices
+Stacked Column Chart: Show a breakdown of obesity levels for different smoking statuses and alcohol consumption levels to assess the impact of lifestyle choices.
+Donut Chart: Use a donut chart to illustrate the percentage of high-risk lifestyle choices (e.g., smoking, alcohol consumption) within obese and overweight categories.
+KPI Cards: Display metrics such as “Suggested Premium Adjustment” based on high-risk behaviors or healthcare cost averages.
+Table with Conditional Formatting: Display a table of individuals or customer segments with high obesity levels and costs above average, with conditional formatting to highlight the most severe cases.
+3. Adding Interactivity and Filters
+Filters: Include slicers for Age Group, Obesity Level, Smoking Status, Alcohol Consumption, and Physical Activity
+
+
+
+
+
+
+
